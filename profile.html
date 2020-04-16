@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Twitter Wall</title>
+		<link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
+		<link href="index.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+		<script>
+			if(Cookies.get('name') == undefined || Cookies.get('uid') == undefined)
+				location.href = 'login.html';
+		</script>
+		<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+		<script src="profile.js"></script>	  
+	</head>
+	<body class="segoe" style="background: rgb(230, 236, 240);">
+		<div>
+			<div class="wallcontainer">
+				<div class="profilecard">
+					<div class="profilecardhead"></div>
+					<div class="profilecardimagediv">
+						<img src="http://3.bp.blogspot.com/-JCYefwq__2U/TxCfC3s1ZpI/AAAAAAAAKcM/u5mw7qPAL0w/s300-c/Camilla-Belle-6.jpg">
+					</div>
+
+					<div class="profilecardnameidcont">
+						<div class="profilecardnamecont">
+							<span id="profilecardname"></span>
+						</div>
+						<span id="profilecarduid"></span>
+					</div>
+
+					<div class="profilecardstatsdiv">
+						<ul class="profilecardstatslist">
+							<li class="profilecardstatslistitem">
+								<span class="dispblk">
+									<span class="statslistitemhead">Tweets</span>
+									<span id="statslistitemcount" class="statslistitemcount">0</span>
+								</span>
+							</li>
+
+							<li class="profilecardstatslistitem">
+								<span class="dispblk">
+									<span class="statslistitemhead">Following</span>
+									<span class="statslistitemcount">35</span>
+								</span>
+							</li>
+
+							<li class="profilecardstatslistitem">
+								<span class="dispblk">
+									<span class="statslistitemhead">Followers</span>
+									<span class="statslistitemcount">34</span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+				<div class="rightcontainer">
+					<div class="posttweetcontainer">
+						<img class="posttweetprofimg" src="http://3.bp.blogspot.com/-JCYefwq__2U/TxCfC3s1ZpI/AAAAAAAAKcM/u5mw7qPAL0w/s300-c/Camilla-Belle-6.jpg">
+						<div class="ml56px">
+							<div class="posttweettacontainer">
+								<textarea id="posttweetta" class="posttweetta" placeholder="What's happening?"></textarea>
+								<div class="posttweetcountcont">
+									<span class="posttweetcount"><span id="totalchars">0</span>/250</span>
+								</div>
+							</div>
+							<div class="posttweetbutcont">
+								<button id="posttweetbut" class="posttweetbut">Tweet</button>
+							</div>
+						</div>
+					</div>
+					<div>
+						<ul id="tweetscontainer" class="tweetscontainer">
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>	
